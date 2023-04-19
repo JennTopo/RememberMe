@@ -33,15 +33,23 @@ const currentDate = document. querySelector(".current-date");
 const date = new Date(),
 currentYear = date.getFullYear(),
 currentMonth = date. getMonth();
+currentTime = date. getTime ();
 console.log(date, currentYear, currentMonth)
 let isToday = dayjs('April 19, 20223');
-$('.isToday').text('YYYY-MM-DD-HH:mm:ss')
-.text ('YYYY-MM-DD-HH:mm:ss')
+setInterval(function(){
+  let isToday = dayjs().format('MMM D, YYYY h :mm :ss A')
+$("#currentDay").text(isToday)
+},1000)
 
-function () { 
-let saveBtn = "fas fa-save"
- {
-  saveBtn = ("Save");
-  saveBtn.addEventListener("click",fas fa-save);}
-  window.location.href = "index.html";
-  }
+// function () { 
+//   const saveBtn = document.getElementById('saveBtn');
+//   saveBtn.addEventListener('click'(saveBtn)=> {
+//   });
+
+  
+// let saveBtn = "fas fa-save"
+//  {
+//   saveBtn = ("Save");
+//   saveBtn.addEventListener("click",fas fa-save);}
+//   window.location.href = "index.html";
+//   }
