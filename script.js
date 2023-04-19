@@ -11,10 +11,7 @@ $(function () {
   // useful when saving the description in local storage?
   //save button
     
- 
-  // saveBtn = ("Save");
-  // saveBtn.setForeground(Color.blue);
-  // saveBtn.addEventListener("click",time);
+
 
     // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -22,8 +19,7 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
- 
-  
+
  // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
@@ -31,59 +27,21 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page.
 });
 // ref line 30 in the index.HTML
+
+dayjs().format('L LT')
 const currentDate = document. querySelector(".current-date");
-let date = new Date(),
+const date = new Date(),
 currentYear = date.getFullYear(),
 currentMonth = date. getMonth();
 console.log(date, currentYear, currentMonth)
-let isToday = dayjs('2023-04-17')
-$('.isToday').text(isToday,'YYYY-MM-DD-HH:mm:ss');
+let isToday = dayjs('April 19, 20223');
+$('.isToday').text('YYYY-MM-DD-HH:mm:ss')
+.text ('YYYY-MM-DD-HH:mm:ss')
 
-// dayjs().add (1,'day.js').format('MM-DD-YYYY');
-// dayjs().format('YYYY-MM-DD-HH:mm:ss');
-// console.log()
-
-
-// var isToday = require('dayjs/plugin/isToday')
-// dayjs.extend(isToday)
-//dayjs().isToday() // true
-
-// //Weekday
-// var weekday = require('dayjs/plugin/weekday')
-// dayjs.extend(weekday)
-
-// // when Sunday is the first day of the week
-// dayjs().weekday(-7); // last Sunday
-// dayjs().weekday(7); // next Sunday
-
-// // when Monday is the first day of the week
-// dayjs().weekday(-7) // last Monday
-// dayjs().weekday(7) // next Monday
-
-// //Calendar
-// var calendar = require('dayjs/plugin/calendar')
-// dayjs.extend(calendar)
-
-// dayjs().calendar(dayjs('2008-01-01'))
-// dayjs().calendar(null, {
-//   sameDay: '[Today at] h:mm A', // The same day ( Today at 2:30 AM )
-//   nextDay: '[Tomorrow at] h:mm A', // The next day ( Tomorrow at 2:30 AM )
-//   nextWeek: 'dddd [at] h:mm A', // The next week ( Sunday at 2:30 AM )
-//   lastDay: '[Yesterday at] h:mm A', // The day before ( Yesterday at 2:30 AM )
-//   lastWeek: '[Last] dddd [at] h:mm A', // Last week ( Last Monday at 2:30 AM )
-//   sameElse: 'DD/MM/YYYY' // Everything else ( 17/10/2011 )
-// })
-
-// // unit of time
-// var duration = dayjs.duration()
-
-// duration.as('hours');
-// duration.as('minutes');
-// duration.as('seconds');
-// duration.as('milliseconds');
-
-// //Local Data
-// var localeData = require('dayjs/plugin/localeData')
-// dayjs.extend(localeData)
-
-// dayjs().localeData()
+function () { 
+let saveBtn = "fas fa-save"
+ {
+  saveBtn = ("Save");
+  saveBtn.addEventListener("click",fas fa-save);}
+  window.location.href = "index.html";
+  }
