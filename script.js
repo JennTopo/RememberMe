@@ -21,21 +21,22 @@ setInterval(function () {
 dateDisplayEl.text(rightNow);
 })
 
-const currentHour = new Date().getHours();
+// const currentHour = new Date().getHours();
+var currentHour = dayjs().hour();
+var blockHour = 
 
 $(function() {
-  $(".row .time-block").each(function() {
-    const hour = $(this).attr("textarea");
+  $(".row time-block").each(function() {
+    const hour = $(this).attr("id");
     if (hour < currentHour) {
-      $(this).removeClass("present future").addClass(".past");
+      $(this).removeClass("present", "future").addClass("past");
     } else if (hour === currentHour) {
-      $(this).removeClass("past future").addClass(".present");
+      $(this).removeClass("past","future").addClass("present");
     } else {
-      $(this).removeClass("past present").addClass(".future");
+      $(this).removeClass("past", "present").addClass("future");
     }
   });
 });
-
 
 $('.saveBtn')
 console.log($('saveBtn'),"saveBtn")
@@ -45,74 +46,7 @@ $(document).ready(function() {
     var jsonData = JSON.stringify(data);
    });
   });
-  
-
-    // do something with the JSON data
-
-
-// const jsonData = JSON. string(data);  
-
-// $(data).ready(function()); {
-//   $('#saveBtn').click(function() {
-//     var jsonData = JSON.stringify(data);
-
-// });
-// $(.saveBtn).string(function() {
-//   $("#saveBtn").click(function() {
-//     $(this), jsonData = JSON. string(data);  
-//   });
-// });
-
-
-  // const saveBtn = document.getElementById('saveBtn')
-  // const saveBtn = document.quereySelectAll('saveBtn');
-  
  
-  
-//  forEach (saveBtn.addEventListener('click', (saveBtn))) {
-//   const element = array[JSON];
-   
-//  }
-
-// function () 
-
-// saveBtn.addEventListener(data){
-//   const jsonData = JSON. string(data);  
-  
-//   saveBtn.addEventListener('click', (saveBtn)) 
-
-//     const dataToSave = {
-// //     }
-// // saveBtn.addEventListener('click (event)'), 
-// //   {
-// // window.location.href = ("index.html")}
-
-
-// //   //   window.location.href = "index.html";
-//   // }
-
-//   const formData = {
-//     message: messageInput.value
-
-//   }
-//   let button saveBtn = "fas fa-save"
-//   saveBtn = ("Save");{
-//   saveBtn.addEventListener("click", (fas fa - save);
-
-// function saveData(data){
-//   const jsonData = JSON. string(data);
-
-//   const link = document.createElement("row time-block"); 
-//   link.href =index.html(window.location);
-//   link.saveBtn = textarea;
-
-//   link.dispatchEvent(new MouseEvent (click,));
-
-// }
-
-
-
-
 //TODO: Add a listener for click events on the save button. This code should
 // use the id in the containing time-block as a key to save the user input in
 // local storage. HINT: What does `this` reference in the click listener
