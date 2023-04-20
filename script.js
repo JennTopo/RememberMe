@@ -25,19 +25,17 @@ dateDisplayEl.text(rightNow);
 var currentHour = dayjs().hour();
 var blockHour = 
 
-$(function() {
-  $(".row time-block").each(function() {
-    const hour = $(this).attr("id");
-    if (hour < currentHour) {
-      $(this).removeClass("present", "future").addClass("past");
+
+$("time-block").each(function() {
+let hour = $(this).attr('id').replace('hour-', '');
+    if (currentHour > hour) {
+      $(this).removeClass('present')+('future').addClass('past');
     } else if (hour === currentHour) {
-      $(this).removeClass("past","future").addClass("present");
+      $(this).removeClass('past')+('future').addClass('present');
     } else {
-      $(this).removeClass("past", "present").addClass("future");
+      $(this).removeClass('past')+('present').addClass('future');
     }
   });
-});
-
 $('.saveBtn')
 console.log($('saveBtn'),"saveBtn")
 const jsonData = JSON. string(data);  
