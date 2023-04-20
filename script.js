@@ -4,37 +4,111 @@
 $(function () {
   const container = document.getElementById('container-fluid');
   const textarea = document.getElementById('textarea')
-  const saveBtn = document.getElementById('saveBtn')
-  const saveBtn = document.getElementById('saveBtn');
-  saveBtn.addEventListener('click', (saveBtn)) 
-    const dataToSave = {
+
+// ref line 30 in the index.HTML
+dayjs().format('L LT')
+const currentDate = document.querySelector(".current-date");
+const date = new Date(),
+  currentYear = date.getFullYear(),
+  currentMonth = date.getMonth();
+currentTime = date.getTime();
+console.log(date, currentYear, currentMonth)
+let isToday = dayjs('April 19, 20223');
+setInterval(function () {
+  let isToday = dayjs().format('MMM D, YYYY h :mm :ss A')
+  $("#currentDay").text(isToday)
+}, 1000)
+dateDisplayEl.text(rightNow);
+})
+
+const currentHour = new Date().getHours();
+
+$(function() {
+  $(".row .time-block").each(function() {
+    const hour = $(this).attr("textarea");
+    if (hour < currentHour) {
+      $(this).removeClass("present future").addClass(".past");
+    } else if (hour === currentHour) {
+      $(this).removeClass("past future").addClass(".present");
+    } else {
+      $(this).removeClass("past present").addClass(".future");
     }
-saveBtn.addEventListener('click (event)'), 
-  {
-window.location.href = ("index.html")}
+  });
+});
 
 
-  //   window.location.href = "index.html";
-  // }
+$('.saveBtn')
+console.log($('saveBtn'),"saveBtn")
+const jsonData = JSON. string(data);  
+$(document).ready(function() {
+  $('.saveBtn').click(function() {
+    var jsonData = JSON.stringify(data);
+   });
+  });
+  
 
-  const formData = {
-    message: messageInput.value
+    // do something with the JSON data
 
-  }
-  let button saveBtn = "fas fa-save"
-  saveBtn = ("Save");{
-  saveBtn.addEventListener("click", (fas fa - save);
 
-function saveData(data){
-  const jsonData = JSON. stringdata);
+// const jsonData = JSON. string(data);  
 
-  const link = document.createElement("row time-block"); 
-  link.href =index.html(window.location);
-  link.saveBtn = textarea;
+// $(data).ready(function()); {
+//   $('#saveBtn').click(function() {
+//     var jsonData = JSON.stringify(data);
 
-  link.dispatchEvent(new MouseEvent (click,));
+// });
+// $(.saveBtn).string(function() {
+//   $("#saveBtn").click(function() {
+//     $(this), jsonData = JSON. string(data);  
+//   });
+// });
 
-}
+
+  // const saveBtn = document.getElementById('saveBtn')
+  // const saveBtn = document.quereySelectAll('saveBtn');
+  
+ 
+  
+//  forEach (saveBtn.addEventListener('click', (saveBtn))) {
+//   const element = array[JSON];
+   
+//  }
+
+// function () 
+
+// saveBtn.addEventListener(data){
+//   const jsonData = JSON. string(data);  
+  
+//   saveBtn.addEventListener('click', (saveBtn)) 
+
+//     const dataToSave = {
+// //     }
+// // saveBtn.addEventListener('click (event)'), 
+// //   {
+// // window.location.href = ("index.html")}
+
+
+// //   //   window.location.href = "index.html";
+//   // }
+
+//   const formData = {
+//     message: messageInput.value
+
+//   }
+//   let button saveBtn = "fas fa-save"
+//   saveBtn = ("Save");{
+//   saveBtn.addEventListener("click", (fas fa - save);
+
+// function saveData(data){
+//   const jsonData = JSON. string(data);
+
+//   const link = document.createElement("row time-block"); 
+//   link.href =index.html(window.location);
+//   link.saveBtn = textarea;
+
+//   link.dispatchEvent(new MouseEvent (click,));
+
+// }
 
 
 
@@ -61,20 +135,3 @@ function saveData(data){
 // attribute of each time-block be used to do this?
 //
 // TODO: Add code to display the current date in the header of the page.
-
-// ref line 30 in the index.HTML
-
-dayjs().format('L LT')
-const currentDate = document.querySelector(".current-date");
-const date = new Date(),
-  currentYear = date.getFullYear(),
-  currentMonth = date.getMonth();
-currentTime = date.getTime();
-console.log(date, currentYear, currentMonth)
-let isToday = dayjs('April 19, 20223');
-setInterval(function () {
-  let isToday = dayjs().format('MMM D, YYYY h :mm :ss A')
-  $("#currentDay").text(isToday)
-}, 1000)
-dateDisplayEl.text(rightNow);
-})
