@@ -36,6 +36,27 @@ let hour = $(this).attr('id').replace('hour-', '');
       $(this).removeClass('past')+('present').addClass('future');
     }
   });
+
+  function hourUpdater() {
+    // Get the current hour
+    var currentHour = dayjs().hour();
+  
+    // Loop over each time block
+    $('.time-block').each(function () {
+      // Get the hour of the current time block
+      var blockHour = parseInt($(this).attr('id').split('-')[1]);
+        // Check if the current hour is greater than the block's hour
+      if (currentHour > hour) {
+        $('.time-block').each(function().addClass('past'));}
+      // Check if the current hour is equal to the block's hour
+     else {  $(this).removeClass('past')+('future').addClass('present');}
+        // Otherwise, the current hour must be less than the block's hour
+     else if {
+      $(this).removeClass('past')+('present').addClass('future');
+    });
+  }
+
+
 $('.saveBtn')
 console.log($('saveBtn'),"saveBtn")
 const jsonData = JSON. string(data);  
